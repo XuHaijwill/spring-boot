@@ -1,0 +1,16 @@
+plugins {
+	id "java"
+	id "org.springframework.boot.conventions"
+}
+
+description = "Spring Boot Base test"
+
+dependencies {
+	implementation(project(":spring-boot-project:spring-boot-starters:spring-boot-starter-web")) {
+		exclude group: "org.hibernate.validator"
+	}
+
+	implementation(project(":spring-boot-project:spring-boot-starters:spring-boot-starter-data-redis"))
+
+	testImplementation(project(":spring-boot-project:spring-boot-starters:spring-boot-starter-test"))
+}

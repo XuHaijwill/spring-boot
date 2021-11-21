@@ -78,6 +78,11 @@ file("${rootDir}/spring-boot-project/spring-boot-starters").eachDirMatch(~/sprin
 	include "spring-boot-project:spring-boot-starters:${it.name}"
 }
 
+//by Alvin H J customer test
+file("${rootDir}/spring-boot-tests/spring-boot-customer-tests").eachDirMatch(~/spring-boot-customer-test.*/) {
+	include "spring-boot-tests:spring-boot-customer-tests:${it.name}"
+}
+
 file("${rootDir}/spring-boot-tests/spring-boot-smoke-tests").eachDirMatch(~/spring-boot-smoke-test.*/) {
 	include "spring-boot-tests:spring-boot-smoke-tests:${it.name}"
 }
