@@ -1,6 +1,20 @@
+#spring:
+#  redis:
+#    host: 192.168.1.102
+#    port: 6379
+#    database: 1
+#    timeout: 5000
+
 spring:
-  redis:
-    host: 127.0.0.1
-    port: 6379
-    database: 1
-    timeout: 5000
+  profiles:
+    active: dev
+
+#logging:
+#  level:
+#    root: DEBUG
+#    org:
+#      springframework:
+#        security: DEBUG
+#        web: DEBUG
+#  pattern:
+#    console: '%d{yyyy-MMM-dd HH:mm:ss.SSS} %-5level [%thread] %logger{15} - %msg%n'
